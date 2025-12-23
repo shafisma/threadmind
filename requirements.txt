@@ -1,0 +1,10 @@
+py-cord
+google-generativeai
+python-dotenv
+reportlab
+fastapi
+uvicorn
+jinja2
+httpx
+python-multipart
+itsdangerous

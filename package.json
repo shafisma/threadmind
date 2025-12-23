@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@discordjs/rest": "^2.6.0",
+    "@prisma/adapter-better-sqlite3": "^7.2.0",
+    "@prisma/client": "^7.2.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "discord.js": "^14.25.1",
+    "next-auth": "^4.24.13",
+    "prisma": "^7.2.0"
+  }
+}
