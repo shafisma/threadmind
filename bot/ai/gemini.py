@@ -21,7 +21,7 @@ def generate(prompt: str, guild_id: str = None):
         headers = {
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",
-            "HTTP-Referer": "https://github.com/your-repo/threadmind",
+            "HTTP-Referer": "https://github.com/shafisma/threadmind",
             "X-Title": "ThreadMind Discord Bot"
         }
         

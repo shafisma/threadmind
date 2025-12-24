@@ -2,23 +2,41 @@
 
 A powerful Discord bot for managing and analyzing conversations in your server. ThreadMind helps you organize discussions, extract insights, and maintain better communication through advanced thread management features.
 
-## Features
+## 🚀 Features
 
-- **Thread Management**: Create, organize, and manage Discord threads efficiently
 - **AI-Powered Summaries**: Generate intelligent summaries of long conversations
-- **Action Items Extraction**: Automatically identify and track action items from discussions
+- **Action Items Extraction**: Automatically identify and track action items
 - **Sentiment Analysis**: Analyze the emotional tone of conversations
 - **Search & Recall**: Find specific messages and information across threads
 - **Timeline Visualization**: View conversation timelines and statistics
-- **Export Capabilities**: Export thread data in various formats
 - **Participant Tracking**: Monitor and analyze user participation
+- **Decision Tracking**: Extract and monitor finalized decisions
+- **Auto-Summarization**: Scheduled summaries for ongoing channels
+- **Multi-format Export**: Export summaries to Markdown and PDF formats
+- **Server Statistics**: View activity metrics and decision-making patterns
 
-## Installation
+## 📋 Commands
+
+### Core Commands
+- `/summarize [thread]` - Generate a summary of a thread
+- `/action-items [thread]` - Extract action items from a thread
+- `/sentiment [thread]` - Analyze sentiment of a thread
+- `/search [query]` - Search for messages across threads
+- `/timeline [thread]` - View conversation timeline
+- `/participants [thread]` - Show thread participants
+- `/statistics [thread]` - Get thread statistics
+- `/export [thread] [format]` - Export thread data
+
+### Advanced Commands
+- `/recall` - Get the latest channel summary
+- `/compare [channel1] [channel2]` - Compare summaries from two channels
+- `/settings [tone]` - Configure AI tone and server preferences
+
+## ⚙️ Installation
 
 ### Prerequisites
 
 - Python 3.8 or higher
-- Node.js (for frontend components)
 - Discord bot token
 - Google Gemini API key (for AI features)
 
@@ -35,114 +53,51 @@ A powerful Discord bot for managing and analyzing conversations in your server. 
    pip install -r requirements.txt
    ```
 
-3. **Install Node.js dependencies:**
-   ```bash
-   npm install
+3. **Configure environment variables:**
+   Create a `.env` file in the root directory with:
    ```
-
-4. **Configure environment variables:**
-   Create a `.env` file in the root directory with the following variables:
-   ```
-   DISCORD_BOT_TOKEN=your_discord_bot_token_here
+   DISCORD_TOKEN=your_discord_bot_token_here
    GEMINI_API_KEY=your_gemini_api_key_here
-   DATABASE_URL=sqlite:///data.db
+   OPENROUTER_API_KEY=your_openrouter_api_key_here
    ```
 
-5. **Initialize the database:**
+4. **Initialize the database:**
    ```bash
    python -c "from storage.db import init_db; init_db()"
    ```
 
-6. **Run the bot:**
+5. **Run the bot:**
    ```bash
    python bot/main.py
    ```
 
-## Usage
+## 🤖 AI Integration
 
-### Basic Commands
+ThreadMind uses Google Gemini for advanced AI capabilities including:
+- Natural language understanding
+- Summarization
+- Sentiment analysis
+- Decision extraction
+- Action item identification
 
-- `/summarize [thread]` - Generate a summary of a thread
-- `/action-items [thread]` - Extract action items from a thread
-- `/sentiment [thread]` - Analyze sentiment of a thread
-- `/search [query]` - Search for messages across threads
-- `/timeline [thread]` - View conversation timeline
-- `/participants [thread]` - Show thread participants
-- `/statistics [thread]` - Get thread statistics
-- `/export [thread] [format]` - Export thread data
+## 🏆 Buildathon Submission
 
-### Configuration
+**Description**: ThreadMind is a powerful Discord bot designed to revolutionize conversation management and analysis in Discord servers. Built with Python and leveraging advanced AI capabilities, ThreadMind helps teams organize discussions, extract insights, and maintain better communication through intelligent thread management features.
 
-The bot can be configured through the `/settings` command to customize:
-- AI model preferences
-- Summary length
-- Sentiment analysis sensitivity
-- Export formats
-- Notification preferences
+**Teammates**: ShafisMa (https://github.com/shafisma)
 
-## Project Structure
+**Link**: https://github.com/shafisma/threadmind
 
-```
-threadmind/
-├── bot/                    # Discord bot implementation
-│   ├── main.py            # Bot entry point
-│   ├── commands/          # Command implementations
-│   ├── ai/               # AI integration (Gemini)
-│   └── storage/          # Database management
-├── storage/              # Database models and utilities
-├── requirements.txt      # Python dependencies
-├── package.json          # Node.js dependencies
-├── .env                  # Environment variables
-└── README.md            # This file
-```
+**Bot Invite**: https://discord.com/oauth2/authorize?client_id=1452527298124316672&scope=bot%20applications.commands&permissions=534723982656
 
-## Contributing
+## 🚀 Future Roadmap
 
-We welcome contributions! Please follow these steps:
+- Web dashboard for enhanced visualization
+- Multi-server analytics and comparison
+- Integration with external productivity tools
+- Advanced machine learning for better insights
+- Mobile application for on-the-go access
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Development Setup
-
-1. Set up a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-2. Install development dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Run tests:
-   ```bash
-   python -m pytest
-   ```
-
-## License
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-If you encounter any issues or have questions, please:
-- Check the [Issues](https://github.com/shafisma/threadmind/issues) section
-- Create a new issue if your problem isn't already addressed
-- Join our Discord server for community support
-
-## Contributing Organizations
-
-This project is maintained by:
-- [ShafisMa](https://github.com/shafisma)
-
-## Acknowledgments
-
-- Discord.py library for Discord bot functionality
-- Google Gemini for AI capabilities
-- SQLite for database management
-- All contributors and testers
