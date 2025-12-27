@@ -80,14 +80,6 @@ ThreadMind uses Google Gemini for advanced AI capabilities including:
 - Decision extraction
 - Action item identification
 
-## 🏆 Buildathon Submission
-
-**Description**: ThreadMind is a powerful Discord bot designed to revolutionize conversation management and analysis in Discord servers. Built with Python and leveraging advanced AI capabilities, ThreadMind helps teams organize discussions, extract insights, and maintain better communication through intelligent thread management features.
-
-**Teammates**: ShafisMa (https://github.com/shafisma)
-
-**Link**: https://github.com/shafisma/threadmind
-
 **Bot Invite**: https://discord.com/oauth2/authorize?client_id=1452527298124316672&scope=bot%20applications.commands&permissions=534723982656
 
 ## 🚀 Future Roadmap
