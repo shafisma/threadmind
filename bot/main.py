@@ -1,6 +1,11 @@
-import discord, os
-from discord.ext import commands
+import os, sys
+from pathlib import Path
+from discord import Bot
 from dotenv import load_dotenv
+
+# Add parent directory to path to allow imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 from bot.commands import (
     summarize, recall, sentiment, action_items, participants, 
     timeline, search, settings, compare, statistics
@@ -9,7 +14,8 @@ from bot.scheduler import auto_summary
 
 load_dotenv()
 
-bot = commands.Bot(intents=discord.Intents.all())
+# Use py-cord's Bot class which supports slash_command
+bot = Bot()
 
 summarize.register(bot)
 recall.register(bot)
